@@ -1,0 +1,40 @@
+{
+  "name": "defra.identity-hapi-plugin-demo",
+  "version": "1.0.1",
+  "description": "A demo application for DEFRA's hapi auth plugin",
+  "repository": {
+    "type": "git",
+    "url": "github:DEFRA/defra-identity-hapi-plugin"
+  },
+  "main": "run.js",
+  "scripts": {
+    "start": "DEBUG=defra.identity:* node .",
+    "dev": "DEBUG=defra.identity:* nodemon .",
+    "lint": "eslint . --cache"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "engines": {
+    "node": "~12.16.0",
+    "npm": "~6.13.4"
+  },
+  "keywords": [],
+  "author": "Chris Cheshire",
+  "license": "ISC",
+  "dependencies": {
+    "@envage/defra-identity-hapi-plugin": "5.x.x",
+    "@hapi/hapi": "20.2.2",
+    "@hapi/inert": "^6.0.1",
+    "@hapi/vision": "^6.0.0",
+    "@hapi/yar": "^10.0.0",
+    "blipp": "^3.0.0",
+    "catbox-mongodb": "^4.2.1",
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.7",
+    "eslint": "^6.4.0",
+    "pre-commit": "^1.2.2",
+    "qrcode": "^1.5.0",
+    "standard": "^14.3.1"
+  }
+}

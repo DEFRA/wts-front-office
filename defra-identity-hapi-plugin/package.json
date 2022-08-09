@@ -1,0 +1,51 @@
+{
+  "name": "@envage/defra-identity-hapi-plugin",
+  "version": "5.2.7",
+  "description": "A hapi auth plugin to allow easy integration with DEFRA's Identity Management system",
+  "repository": {
+    "type": "git",
+    "url": "github:DEFRA/defra-identity-hapi-plugin"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test",
+    "example": "demo"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "npx @hapi/lab -v -I",
+    "lint": "eslint . --cache",
+    "test:lcov": "npx @hapi/lab -vc -r lcov -o coverage.lcov",
+    "test:analyse": "npm run test:lcov && gulp analyse"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "author": "Department for Environment, Food & Rural Affairs",
+  "license": "See LICENSE.md",
+  "dependencies": {
+    "@hapi/cookie": "^11.0.0",
+    "@hapi/hoek": "10.0.0",
+    "adal-node": "^0.2.2",
+    "await-to-js": "^2.0.1",
+    "debug": "^3.1.0",
+    "got": "^10.7.0",
+    "joi": "17.6.0",
+    "lodash": "^4.17.21",
+    "md5": "^2.2.1",
+    "openid-client": "^4.2.0",
+    "uuid": "8.3.2"
+  },
+  "devDependencies": {
+    "@hapi/code": "^8.0.1",
+    "@hapi/lab": "^22.0.3",
+    "eslint": "^6.4.0",
+    "gulp": "^4.0.0",
+    "gulp-cli": "^2.3.0",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.1.1",
+    "sonarqube-scanner": "^2.6.0",
+    "standard": "^14.3.1",
+    "testdouble": "^3.13.0"
+  }
+}

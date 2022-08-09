@@ -1,0 +1,44 @@
+{
+    "tokenSet": {
+      "access_token": "nTmZRaNCVrCpE9OXjQ5AyWUL9bsaT6aaucGgyBdmkZu",
+      "expires_at": 1655974926,
+      "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InIxTGtiQm8zOTI1UmIyWkZGckt5VTNNVmV4OVQyODE3S3gwdmJpNmlfS2MifQ.eyJyZWxhdGlvbnNoaXBzIjpbImQ1NjI4YjMxLWU3Y2QtNGEwZS05M2Q1LTFhOTUzNzcyMTYwZjphNmYxNjFiYy1kMTIzLTQ2YmEtODBiZS0xYTgyY2EzZDVmNjQ6R3VpbGRmb3JkIFdhc3RlIEJyb2tlcnM6MDpFbXBsb3llZTowIl0sInJvbGVzIjpbImQ1NjI4YjMxLWU3Y2QtNGEwZS05M2Q1LTFhOTUzNzcyMTYwZjpXSU5SZWNvcmRlcjozIl0sInNlcnZpY2VJZCI6IjdmMjYwZjUzLWVkYmQtNGNjOC1iMzM0LWZiNThmOWY1NzY3ZiIsImZpcnN0TmFtZSI6IlBhdWwiLCJsYXN0TmFtZSI6IldlbGxlciIsInN1YiI6IlVzZXIwMDEiLCJhdF9oYXNoIjoibExFUENTWnk2Q0x0T29tbEdNWnFZUSIsImF1ZCI6Im15Y2xpZW50aWQiLCJleHAiOjE2NTU5NzQ5MjYsImlhdCI6MTY1NTk3MTMyNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.LO6AGsFYhpfZfoXihQC3IJJUnv-S-q1XSy_G2YE_Vuezp3D22waKHXWg4QqGxuTysqCKglliZMfDQDDlxHzpROUGn--dJ8QWhJJ-Nq8E-Tnlik-EpqUGw0jDzEw6FyZJouS4R6U_f0QklPAGaBw50kC9uzf9rQxVRxx-YmB3ul7fMu_4KuyPx42cmoIFJeqD-7p5MhBrVCDNY3IvQ3UreSA2ySR4vBDuTWMByu2nFKXmRM53cqdLhSVoKjWtiVkDzlYqLUFMvN7v5MvZ5-sYC-HXKtcznjmw4hITa0T2AaA5choHowN3Us6WyKX0gKVUUMu_p9_klEiJHJTXLLr4kA",
+      "scope": "openid",
+      "token_type": "Bearer",
+      "claims": {
+        "relationships": [
+          "d5628b31-e7cd-4a0e-93d5-1a953772160f:a6f161bc-d123-46ba-80be-1a82ca3d5f64:Guildford Waste Brokers:0:Employee:0"
+        ],
+        "roles": [
+          "d5628b31-e7cd-4a0e-93d5-1a953772160f:WINRecorder:3"
+        ],
+        "serviceId": "7f260f53-edbd-4cc8-b334-fb58f9f5767f",
+        "firstName": "Paul",
+        "lastName": "Weller",
+        "sub": "User001",
+        "at_hash": "lLEPCSZy6CLtOomlGMZqYQ",
+        "aud": "myclientid",
+        "exp": 1655974926,
+        "iat": 1655971326,
+        "iss": "http://localhost:3000"
+      }
+    },
+    "claims": {
+      "relationships": [
+        "d5628b31-e7cd-4a0e-93d5-1a953772160f:a6f161bc-d123-46ba-80be-1a82ca3d5f64:Guildford Waste Brokers:0:Employee:0"
+      ],
+      "roles": [
+        "d5628b31-e7cd-4a0e-93d5-1a953772160f:WINRecorder:3"
+      ],
+      "serviceId": "7f260f53-edbd-4cc8-b334-fb58f9f5767f",
+      "firstName": "Paul",
+      "lastName": "Weller",
+      "sub": "User001",
+      "at_hash": "lLEPCSZy6CLtOomlGMZqYQ",
+      "aud": "myclientid",
+      "exp": 1655974926,
+      "iat": 1655971326,
+      "iss": "http://localhost:3000"
+    }
+  }
+  

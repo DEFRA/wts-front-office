@@ -1,0 +1,47 @@
+{
+    "tokenSet": {
+      "access_token": "ZBFUimALMiFAApCEctHk20W6zxqNh7YHYgTdVh-C8YB",
+      "expires_at": 1655975126,
+      "id_token": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InIxTGtiQm8zOTI1UmIyWkZGckt5VTNNVmV4OVQyODE3S3gwdmJpNmlfS2MifQ.eyJyZWxhdGlvbnNoaXBzIjpbIjE2MGQxOGNiLTQ3MzUtNDBkZi04ZTYxLTRmY2VhZDY1NjhmOTpmZDU3YzM2Ny1jMGU0LTQ5MTUtYjgyMS1iNWIxMTg5NGRkM2M6V29raW5nIFdhc3RlIERlYWxlcnM6MDpFbXBsb3llZTowIl0sInJvbGVzIjpbIjE2MGQxOGNiLTQ3MzUtNDBkZi04ZTYxLTRmY2VhZDY1NjhmOTpXSU5SZWNvcmRlcjozIl0sInNlcnZpY2VJZCI6Ijg2OWE4YjExLTJhMWQtNGVkNS04OWI0LTY4NTEzZjAwMWMzMCIsImZpcnN0TmFtZSI6IkJydWNlIiwibGFzdE5hbWUiOiJGb3h0b24iLCJzdWIiOiJVc2VyMDAyIiwiYXV0aF90aW1lIjoxNjU1OTcxNTI2LCJhdF9oYXNoIjoiZnRMX0U3NFFLRENWckJ1SW10bnhmQSIsImF1ZCI6Im15Y2xpZW50aWQiLCJleHAiOjE2NTU5NzUxMjYsImlhdCI6MTY1NTk3MTUyNiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwIn0.w0Kr2qdLclmwcQNX65sbML8_55qFYXTOJbHLZIMHW7JoIxInV3jitW2rG-Xz4xz-vjPD3AefLG2kEmQfLgmBwFvo1xCCQPFpkT5nF1d2aEfmnU-xMHEbEYHqS8mxt_znO0VxfSi9YSJ0iw4Xzd07ecp74_FotPoec6MpRRURhAXikMLowJ0oO74FTf15kw_Hcsc5X5-gkg2dQxdqhDtUnCzLtT3UzWuPlPKTTY4i0hKV_vExNGSWTnKpTIYtSa26ZNdTZyipBO9t0JBS-GCSzTNHVKIyivRl5DfmwtQOcf1cYUB0MVUnJ9uKqJzwf8nCefVk83A898HJ2XQwBGtoQA",
+      "refresh_token": "Hl-HInWAnAm97PSv1BTr3HhimIyTjU0F2xQmO_QODeQ",
+      "scope": "openid",
+      "token_type": "Bearer",
+      "claims": {
+        "relationships": [
+          "160d18cb-4735-40df-8e61-4fcead6568f9:fd57c367-c0e4-4915-b821-b5b11894dd3c:Woking Waste Dealers:0:Employee:0"
+        ],
+        "roles": [
+          "160d18cb-4735-40df-8e61-4fcead6568f9:WINRecorder:3"
+        ],
+        "serviceId": "869a8b11-2a1d-4ed5-89b4-68513f001c30",
+        "firstName": "Bruce",
+        "lastName": "Foxton",
+        "sub": "User002",
+        "auth_time": 1655971526,
+        "at_hash": "ftL_E74QKDCVrBuImtnxfA",
+        "aud": "myclientid",
+        "exp": 1655975126,
+        "iat": 1655971526,
+        "iss": "http://localhost:3000"
+      }
+    },
+    "claims": {
+      "relationships": [
+        "160d18cb-4735-40df-8e61-4fcead6568f9:fd57c367-c0e4-4915-b821-b5b11894dd3c:Woking Waste Dealers:0:Employee:0"
+      ],
+      "roles": [
+        "160d18cb-4735-40df-8e61-4fcead6568f9:WINRecorder:3"
+      ],
+      "serviceId": "869a8b11-2a1d-4ed5-89b4-68513f001c30",
+      "firstName": "Bruce",
+      "lastName": "Foxton",
+      "sub": "User002",
+      "auth_time": 1655971526,
+      "at_hash": "ftL_E74QKDCVrBuImtnxfA",
+      "aud": "myclientid",
+      "exp": 1655975126,
+      "iat": 1655971526,
+      "iss": "http://localhost:3000"
+    }
+  }
+  

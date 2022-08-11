@@ -6,7 +6,7 @@
 <!--<![endif]-->
 <head>
     <meta charset="utf-8"/>
-    <title>IdM
+    <title>Waste Tracking
         <% if (title) { %> - <%= title %>
         <% } %>
     </title>
@@ -52,7 +52,9 @@
                     <% } %>
 
                     <a href="/account" role="button" style="float: right; color: white; margin: 5px 10px 0 0;">
-                        Protected Area
+                        <% if (typeof claims !== 'undefined' && claims) { %>
+                            <%- `${claims.firstName} ${claims.lastName}` %>
+                            <% } %>
                     </a>
                 </nav>
             </div>

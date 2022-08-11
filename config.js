@@ -20,7 +20,7 @@ module.exports = {
     clientId: env.IDENTITY_CLIENTID,
     clientSecret: env.IDENTITY_CLIENTSECRET,
     defaultPolicy: env.IDENTITY_DEFAULT_POLICY,
-    defaultJourney: env.IDENTITY_DEFAULT_JOURNEY,
+    defaultJourney: env.IDENTITY_DEFAULT_JOURNEY
   },
 
   serviceRoleId: env.IDENTITY_SERVICEROLEID,

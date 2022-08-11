@@ -13,15 +13,19 @@ module.exports = [
       let title = 'Whoops...'
       let message = 'An unexpected error has occurred'
       let stack// = query.stack ? JSON.parse(query.stack) : undefined
+      let loginUrl
 
       if (query.notLoggedInErr) {
         const { next } = query
 
+        loginUrl = idm.generateAuthenticationUrl(next)
         title = 'Whoops...'
-        message = `You need to be logged in to do that. <a href='${idm.generateAuthenticationUrl(next)}'>Click here to log in or create an account</a>`
+        message = 'You need to be logged in to do that.'
       }
 
       return h.view('error', {
+        notLoggedInErr: query.notLoggedInErr,
+        loginUrl,
         title,
         message,
         stack

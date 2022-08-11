@@ -4,26 +4,13 @@ const Blipp = require('blipp')
 const yar = require('@hapi/yar')
 const inert = require('@hapi/inert')
 const vision = require('@hapi/vision')
-const ejs = require('ejs')
-const catboxMongo = require('catbox-mongodb')
-// const defraIdentityHapiPlugin = require('defra-identity-hapi-plugin')
-const defraIdentityHapiPlugin = require('./defra-identity-hapi-plugin')
+const nunjucks = require('nunjucks')
+const wtsIdentityHapiPlugin = require('@defra/wts-identity-hapi-plugin')
+// const wtsIdentityHapiPlugin = require('./defra-identity-hapi-plugin')
 
 const config = require('./config')
 
-const serverCache = config.mongoCache.enabled ? [
-  {
-    name: 'mongoCache',
-    provider: {
-      constructor: catboxMongo,
-      options: {
-        partition: 'idm-cache',
-        host: config.mongoCache.connectionString ? undefined : config.mongoCache.host,
-        uri: config.mongoCache.connectionString
-      }
-    }
-  }
-] : undefined
+const serverCache = config.mongoCache.enabled ? undefined : undefined
 
 const security = {
   xframe: 'deny',
@@ -115,12 +102,12 @@ async function start () {
       clientId,
       clientSecret,
       defaultPolicy,
-      defaultJourney,
+      defaultJourney
     }
   } = config
 
   await server.register({
-    plugin: defraIdentityHapiPlugin,
+    plugin: wtsIdentityHapiPlugin,
     options: {
       identityAppUrl,
       authRedirectUriFqdn,
@@ -198,7 +185,7 @@ async function start () {
   server.route([
     ...require('./routes/root'),
     ...require('./routes/account'),
-    ...require('./routes/enrolment'),
+    ...require('./routes/dashboard'),
     ...require('./routes/error')
   ])
 
@@ -206,7 +193,28 @@ async function start () {
   await server.register(vision)
 
   server.views({
-    engines: { ejs },
+    engines: {
+      html: {
+        compile: (src, options) => {
+          const template = nunjucks.compile(src, options.environment)
+
+          return (context) => {
+            return template.render(context)
+          }
+        },
+        prepare: (options, next) => {
+          options.compileOptions.environment = nunjucks.configure([
+            path.join(options.relativeTo || process.cwd(), options.path),
+            'node_modules/govuk-frontend/'
+          ], {
+            autoescape: true,
+            watch: false
+          })
+
+          return next()
+        }
+      }
+    },
     relativeTo: __dirname,
     path: 'views'
   })

@@ -1,26 +1,7 @@
 module.exports = [
   {
     method: 'GET',
-    path: '/account',
-    options: {
-      auth: false
-    },
-    handler: async function (request, h) {
-      const { idm } = request.server.methods
-
-      return h.view('account', {
-        title: 'account',
-        user: null,
-        idm,
-        claims: await idm.getClaims(request),
-        credentials: await idm.getCredentials(request),
-        trulyPrivate: false
-      })
-    }
-  },
-  {
-    method: 'GET',
-    path: '/account-private',
+    path: '/dashboard',
     options: {
       auth: 'idm'
     },
@@ -33,8 +14,8 @@ module.exports = [
       const role = roleInfo.split(':')[1]
       const company = rel.split(':')[2]
 
-      return h.view('account', {
-        title: 'account-private',
+      return h.view('dashboard', {
+        title: 'dashboard',
         user: null,
         idm,
         claims,

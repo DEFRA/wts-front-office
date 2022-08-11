@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]>
+<html class="lte-ie8" lang="en"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8"/>
+    <title>Waste Tracking
+        {% if title %}
+            {{ - title }}
+        {% endif %}
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0c0c"> 
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    
+      <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/govuk/assets/images/favicon.ico" type="image/x-icon">
+      <link rel="mask-icon" href="/govuk/assets/images/govuk-mask-icon.svg" color="#0b0c0c"> 
+      <link rel="apple-touch-icon" sizes="180x180" href="/govuk/assets/images/govuk-apple-touch-icon-180x180.png">
+      <link rel="apple-touch-icon" sizes="167x167" href="/govuk/assets/images/govuk-apple-touch-icon-167x167.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="/govuk/assets/images/govuk-apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" href="/govuk/assets/images/govuk-apple-touch-icon.png">
+    
+
+    
+  <!--[if lte IE 8]><link href="/public/stylesheets/application-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!--[if gt IE 8]><!--><link href="/public/stylesheets/application.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+
+    <link rel="stylesheet" media="screen" href="/stylesheets/fonts.css"/>
+    <link rel="stylesheet" media="screen" href="/stylesheets/application.css"/>
+    <link rel="stylesheet" media="screen" href="/stylesheets/govuk-template.css"/>
+    <link rel="stylesheet" media="screen" href="/stylesheets/built-application.css"/>
+
+    <style type="text/css">
+        pre {
+            border: 1px solid #ccc;
+            padding: 10px;
+            background: #eee;
+        }
+    </style>
+
+</head>
+
+<body class="govuk-template__body>
+
+<div id="skiplink-container">
+    <div>
+        <a href="#content" class="skiplink">Skip to main content</a>
+    </div>
+</div>
+
+<header role="banner" id="global-header" class="with-proposition">
+    <div class="header-wrapper">
+        <div class="header-global">
+            <div class="header-logo">
+                <a href="/" title="Go to the GOV.UK homepage" id="logo" class="content" style="padding-left: 45px; padding-top: 5px;">GOV.UK - Service</a>
+            </div>
+
+        </div>
+        <div class="header-proposition">
+            <div class="content">
+                <nav id="proposition-menu">
+                    {% if claims %}
+                        <a class="button" href="/logout" role="button" style="float: right;">Log out</a>
+                        <a href="#" role="button" style="float: right; color: white; margin: 5px 10px 0 0;">
+                            {{ company }} 
+                        </a>
+                        <a href="#" role="button" style="float: right; color: white; margin: 5px 10px 0 0;">
+                            {{ role }} 
+                        </a>
+                        <a href="#" role="button" style="float: right; color: white; margin: 5px 10px 0 0;">
+                            {{ claims.firstName }} {{ claims.lastName }} 
+                        </a>
+                    {% endif %}
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<!--end header-->
+
+<div id="global-header-bar"></div>
+
+<div class="site-wrapper">
+    <main id="content" role="main">
+
+        <div class=" grid-row">

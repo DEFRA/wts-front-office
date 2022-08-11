@@ -1,4 +1,4 @@
-<% include ./layout/top.ejs %>
+{% include "./layout/top.html" %}
 
     <div class="breadcrumbs breadcrumb-two-thirds">
         <ol>
@@ -34,16 +34,22 @@
                     <br>
 
                     <div>
-                        <p><a class="button button-start"
-                              href="<%= idm.generateAuthenticationUrl('/account', {forceLogin: false}) %>"
-                              role="button">Start
-                                now</a></p>
+                        <p>
+                            <a class="button button-start"
+                              href="{{ idm.generateAuthenticationUrl('/dashboard', {forceLogin: false}) }}"
+                              role="button">
+                                Start now
+                            </a>
+                        </p>
                     </div>
 
                     <div>
-                        <p><a class="button button-start"
-                              href="<%= idm.generateAuthenticationUrl('/account', {forceLogin: true}) %>" role="button">Start
-                                now (Force login)</a></p>
+                        <p>
+                            <a class="button button-start"
+                              href="{{ idm.generateAuthenticationUrl('/dashboard', {forceLogin: true}) }}" role="button">
+                                Start now (Force login)
+                            </a>
+                        </p>
                     </div>
                 </section>
 
@@ -91,4 +97,4 @@
 
     </div>
 
-<% include ./layout/bottom.ejs %>
+{% include "./layout/bottom.html" %}

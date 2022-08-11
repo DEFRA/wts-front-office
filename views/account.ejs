@@ -37,12 +37,15 @@
             </div>
             <% } %>
             <% } else { %>
-            <h1 class="heading-xlarge2">Welcome!</h1>
-            <h3 class="heading-large">You're logged in!</h3>
-
-            <p><a href="#" onclick="document.querySelector('pre').style.display = 'block'; return false;">Full Tokenset
-                    &gt;</a></p>
-                    <pre style="display: none"><%- `${JSON.stringify(credentials, null, 2)}` %></pre>
+            <h3 class="heading-large">Welcome <%= `${claims.firstName}` %></h3>
+            <br>
+            <p>
+                you are entering the Waste Tracking Service on behalf of company : <%- `${company}` %>
+            </p>
+            <br>
+            <p>
+                and you have the role : <%- `${role}` %>
+            </p>
             <% } %>
         </div>
     </div>

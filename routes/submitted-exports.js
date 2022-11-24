@@ -1,26 +1,7 @@
 module.exports = [
   {
     method: 'GET',
-    path: '/account',
-    options: {
-      auth: false
-    },
-    handler: async function (request, h) {
-      const { idm } = request.server.methods
-
-      return h.view('account', {
-        title: 'account',
-        user: null,
-        idm,
-        claims: await idm.getClaims(request),
-        credentials: await idm.getCredentials(request),
-        trulyPrivate: false
-      })
-    }
-  },
-  {
-    method: 'GET',
-    path: '/account-private',
+    path: '/submitted-exports',
     options: {
       auth: 'idm'
     },
@@ -34,8 +15,8 @@ module.exports = [
       const role = rolet === 'WINRecorder' ? 'WINWriter' : rolet
       const company = rel.split(':')[2]
 
-      return h.view('account', {
-        title: 'account-private',
+      return h.view('submitted-exports', {
+        title: 'Submitted Exports',
         user: null,
         idm,
         claims,

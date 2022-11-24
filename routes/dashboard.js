@@ -11,7 +11,8 @@ module.exports = [
       const credentials = await idm.getCredentials(request)
       const rel = claims.relationships ? claims.relationships[0] : 'unknown:unknown:unknown:0:unknown:0'
       const roleInfo = claims.roles ? claims.roles[0] : 'unknown:unknown:0'
-      const role = roleInfo.split(':')[1]
+      const rolet = roleInfo.split(':')[1]
+      const role = rolet === 'WINRecorder' ? 'WINWriter' : rolet
       const company = rel.split(':')[2]
 
       return h.view('dashboard', {

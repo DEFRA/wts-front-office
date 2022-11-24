@@ -26,7 +26,7 @@ const security = {
 const server = Hapi.server({
   host: config.app.host,
   port: config.app.port,
-  // uri: "https://dk-rwd-wts-glw-dev-fe.azurewebsites.net",
+  // uri: "https://rwd-wts-glw-dev-fe.azurewebsites.net",
   cache: serverCache,
   routes: {
     security: config.isSecure === true ? security : false,
@@ -186,7 +186,8 @@ async function start () {
     ...require('./routes/root'),
     ...require('./routes/account'),
     ...require('./routes/dashboard'),
-    ...require('./routes/error')
+    ...require('./routes/error'),
+    ...require('./routes/submitted-exports')
   ])
 
   // Views
@@ -221,8 +222,8 @@ async function start () {
 
   await server.start()
 
-  console.log('Server running at:', server.info.uri)
-
+  console.log(`Server running at: ${server.info.uri}`)
+  console.log(`Server running at: ${server.info.host} listening on ${server.info.port}`)
   return server
 }
 

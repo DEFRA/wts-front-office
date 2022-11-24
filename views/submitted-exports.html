@@ -1,0 +1,122 @@
+{% include "./layout/top.html" %}
+
+<div class="govuk-width-container ">
+
+  <div class="govuk-breadcrumbs">
+    <ol class="govuk-breadcrumbs__list">
+      <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="">Waste tracking service</a>
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        Green list waste overview
+      </li>
+      <li class="govuk-breadcrumbs__list-item">
+        View submitted exports
+      </li>
+    </ol>
+  </div>
+
+  <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+    {% block content %}
+
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <form method="post" action="">
+
+            <h1 class="govuk-heading-l">
+              View submitted exports
+            </h1>
+
+            <table class="govuk-table" data-module="moj-sortable-table">
+
+              <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                  <th scope="col" class="govuk-table__header">Exporter</th>
+                  <th scope="col" class="govuk-table__header">Your reference number</th>
+                  <th scope="col" class="govuk-table__header" aria-sort="ascending">Collection date</th>
+                  <th scope="col" class="govuk-table__header">Waste code</th>
+                  <th scope="col" class="govuk-table__header">Transaction number</th>
+                  <th scope="col" class="govuk-table__header">Action</th>
+                </tr>
+              </thead>
+              {% if company === "Guildford Waste Brokers" %}
+                <tbody class="govuk-table__body">
+                  <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{ company }}</td>
+                    <td class="govuk-table__cell">GBW_0357</td>
+                    <td class="govuk-table__cell">03 August 2022</td>
+                    <td class="govuk-table__cell">GC050: Spent fluid catalytic cracking (FCC) catalysts (e.g. aluminium oxide, zeolites)
+                      <td class="govuk-table__cell">GLW_001010</td>
+                      <td class="govuk-table__cell">
+                        <a href="">View</a><br>
+                      </tr>
+                                        <tr class="govuk-table__row">
+                    <td class="govuk-table__cell">{{ company }}</td>
+                    <td class="govuk-table__cell">GBW_0341</td>
+                    <td class="govuk-table__cell">23 July 2022</td>
+                    <td class="govuk-table__cell">GG030: Bottom ash and slag tap from coal fired power plants</td>
+                      <td class="govuk-table__cell">GLW_000954</td>
+                      <td class="govuk-table__cell">
+                        <a href="">View</a><br>
+                      </tr>
+                    </tbody>
+                  {% endif %}
+                  {% if company === "Woking Waste Dealers" %}
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">{{ company }}</td>
+                        <td class="govuk-table__cell">WWD_0147</td>
+                        <td class="govuk-table__cell">16 July 2022</td>
+                        <td class="govuk-table__cell">GE020: Glass fibre waste</td>
+                        <td class="govuk-table__cell">GLW_00123</td>
+                        <td class="govuk-table__cell">
+                          <a href="">View</a><br>
+                        </tr>
+                        <td class="govuk-table__cell">{{ company }}</td>
+                        <td class="govuk-table__cell">WWD_0135</td>
+                        <td class="govuk-table__cell">09 July 2022</td>
+                        <td class="govuk-table__cell">B4020: Wastes from production, formulation and use of resins, latex, plasticisers</td>
+                        <td class="govuk-table__cell">GLW_00097</td>
+                        <td class="govuk-table__cell">
+                          <a href="">View</a><br>
+                        </tr>
+                      </tbody>
+                    {% endif %}
+                  </table>
+
+                  <nav class="govuk-pagination" role="navigation" aria-label="results">
+                    <ul class="govuk-pagination__list">
+                      <li class="govuk-pagination__item govuk-pagination__item--current">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1" aria-current="page">
+                          1
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2">
+                          2
+                        </a>
+                      </li>
+                      <li class="govuk-pagination__item">
+                        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                          3
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="govuk-pagination__next">
+                      <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                        <span class="govuk-pagination__link-title">Next</span>
+                        <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewbox="0 0 15 13">
+                          <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </nav>
+                </form>
+
+              </div>
+            </div>
+          {% endblock %}
+        </main>
+      </div>
+      {% include "./layout/bottom.html" %}

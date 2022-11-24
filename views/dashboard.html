@@ -22,7 +22,7 @@
           Green list waste overview
         </h1>
 
-        {% if role === "WINRecorder" %}
+        {% if role === "WINWriter" %}
         <h2 class="govuk-heading-m">
           Tell us about an export
         </h2>
@@ -37,13 +37,13 @@
         <h2 class="govuk-heading-m">
           All exports
         </h2>
-        {% if role === "WINRecorder" %}
+        {% if role === "WINWriter" %}
         <p class="govuk-body">
           <a class="govuk-link" href="#">Update an export with actual details</a>
         </p>
         {% endif %}
         <p class="govuk-body">
-          <a class="govuk-link" href="#">View submitted exports</a>
+          <a class="govuk-link" href="submitted-exports">View submitted exports</a>
         </p>
 
         <!-- <h2 class="govuk-heading-m"> Notify your agency about an export </h2> <ul class="govuk-list"> <li class="app-task-list__item"> <a class="app-task-list__task-name" href="prenotify"> Submit one export </a> </li> <li class="app-task-list__item"> <a class="app-task-list__task-name" href=""> Submit multiple exports using a spreadsheet </a> </li> </ul> <br> <br> <h2 class="govuk-heading-m"> All exports </h2> <ul class="govuk-list"> <li class="app-task-list__item"> <a class="app-task-list__task-name" href="draft-exports"> Continue an export (3) </a> </li> <li class="app-task-list__item"> <a class="app-task-list__task-name" href="update-prenotifications"> Update an export with correct details (1) </a> </li> <li class="app-task-list__item"> <a class="app-task-list__task-name" href="submitted-prenotifications?exporter-time-period=all-dates"> View all submitted exports (27) </a> </li> </ul> -->
